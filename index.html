@@ -158,15 +158,16 @@
 <script language="javascript">
 function login() {
     let uname = $("#uname"),
-        pw = $("#pw")
+    let pw = $("#pw")
 
     console.log(uname.val())
     if (uname.val() == "Kilian" && pw.val() == "12345") {
         console.log(true)
         document.cookie = "login=true; path=/";
         window.location.href = "page2.html"
-    } else if (uname.val() == "") console.log("Please enter sth")
-    else if (uname.val() == "") console.log("Please enter sth")
+    } else {
+    	console.log("Wrong input!!!")
+    }
 }
 </script>
 </body>
