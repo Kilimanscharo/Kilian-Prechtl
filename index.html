@@ -156,18 +156,17 @@
 
 </form>
 <script language="javascript">
-function login() {
-    let uname = $("#uname"),
-    let pw = $("#pw")
+function check(form)
+{
 
-    console.log(uname.val())
-    if (uname.val() == "Kilian" && pw.val() == "12345") {
-        console.log(true)
-        document.cookie = "login=true; path=/";
-        window.location.href = "page2.html"
-    } else {
-    	console.log("Wrong input!!!")
-    }
+ if(form.userid.value == "Kilian" && form.pswrd.value == "12345")
+  {
+    window.open("page2.html")
+  }
+ else
+ {
+   alert("Wrong input!")
+  }
 }
 </script>
 </body>
